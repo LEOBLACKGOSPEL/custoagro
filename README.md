@@ -53,4 +53,42 @@ Okulima é um sistema de gestão agrícola inteligente desenvolvido para auxilia
    ```bash
    git clone https://github.com/seu-usuario/okulima.git
    cd okulima
+   
+2. **Instale as Dependências**
 
+   ```bash
+   composer install
+   npm install && npm run dev
+
+3. **Copie o Arquivo .env**
+
+   ```bash
+   cp .env.example .env
+
+4. **Gere a Chave da Aplicação**
+
+   ```bash
+   php artisan key:generate
+
+5. **Configure o Arquivo .env**
+
+   ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=okulima
+    DB_USERNAME=root
+    DB_PASSWORD=secret
+
+
+6. **Migre as Tabelas**
+
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   php artisan serve
+
+7. **Inicie o sistema**
+
+   ```bash
+   php artisan serve
